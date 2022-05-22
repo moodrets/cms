@@ -1,0 +1,13 @@
+body {
+    min-width: 320px;
+
+    * {
+        font-family: Roboto;
+        font-weight: 400;
+    }
+
+    &.dark {
+        background-color: theme('colors.main');
+        color: theme('colors.white');
+    }
+}
