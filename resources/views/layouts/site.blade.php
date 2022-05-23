@@ -8,11 +8,12 @@
     </head>
     <body>
         <x-svg-sprite></x-svg-sprite>
-        <main id="main" class="tracking-wider">
+        <main id="main" class="tracking-wider" @click="appClickHandler($event)">
             <x-header :page-attributes="$page->attributes"></x-header>
             @yield('content')
             <x-footer :page-attributes="$page->attributes"></x-footer>
             <x-offcanvas></x-offcanvas>
+            <x-modals></x-modals>
         </main>
         @foreach (getAttributesByName($page->attributes,'scripts') as $item)
         <script src="{{$item->pivot->value}}" async></script>

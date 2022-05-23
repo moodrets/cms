@@ -1,4 +1,4 @@
-<footer class="site-footer py-8 lg:py-16 bg-secondary dark:bg-main">
+<footer class="site-footer py-8 lg:py-16 bg-secondary dark:bg-main-10">
     <div class="container mx-auto px-4">
         <div class="md:flex justify-between items-end">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-20">

@@ -25,4 +25,12 @@
         <path d="M492,76H20C8.954,76,0,84.954,0,96s8.954,20,20,20h472c11.046,0,20-8.954,20-20S503.046,76,492,76z"/>
         <path d="M492,396H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h472c11.046,0,20-8.954,20-20 C512,404.954,503.046,396,492,396z"/>
     </symbol>
+    <symbol viewBox="0 0 10.73 10.73" id="search">
+        <circle fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" cx="4.61" cy="4.61" r="3.61"/>
+        <line fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" x1="7.14" y1="7.14" x2="10.03" y2="10.03"/>
+    </symbol>
+    <symbol viewBox="0 0 10.73 10.73" id="search-brand">
+        <circle fill="none" stroke="#E84801" stroke-width="2" stroke-miterlimit="10" cx="4.61" cy="4.61" r="3.61"/>
+        <line fill="none" stroke="#E84801" stroke-width="2" stroke-miterlimit="10" x1="7.14" y1="7.14" x2="10.03" y2="10.03"/>
+    </symbol>
 </svg>

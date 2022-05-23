@@ -7,7 +7,15 @@ body {
     }
 
     &.dark {
-        background-color: theme('colors.main');
+        background-color: theme('colors.main-10');
         color: theme('colors.white');
     }
+}
+
+[v-cloak] {
+    display: none;
+}
+
+p {
+    font-weight: inherit;
 }
