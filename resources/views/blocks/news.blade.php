@@ -2,7 +2,7 @@
     <div class="container mx-auto px-4">
         <div class="md:flex md:justify-between mb-8 text-34px lg:text-46px leading-tight">
             <h2 class="font-medium">Новости</h2>
-            <a href="#" class="mt-4 md:mt-0 block text-brand hover:underline hover:text-brand-10">Все новости</a>
+            <a href="#" class="mt-4 md:mt-0 block text-brand hover:text-brand-10">Все новости</a>
         </div>
         <div class="grid gap-5 grid-cols-1 lg:grid-cols-2">
 

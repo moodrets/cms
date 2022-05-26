@@ -1,38 +1,27 @@
-import Vue from 'vue'
-import { toggleTheme, themeOnLoad } from './helpers/themeMode'
+import Vue from 'vue';
+import { toggleTheme } from '../../shared/js/helpers/index';
+import { showOffcanvas, showModal } from '../../shared/js/events/index';
 
 // [+] components
-import Offcanvas from './components/Offcanvas'
-import Modal from './components/Modal'
+import Offcanvas from '../../shared/js/components/Offcanvas';
+import Modal from '../../shared/js/components/Modal';
 // [-] components
 
-Vue.component('app-offcanvas', Offcanvas)
-Vue.component('app-modal', Modal)
+Vue.component('app-offcanvas', Offcanvas);
+Vue.component('app-modal', Modal);
 
 const app = new Vue({
     el: '#main',
     data() {
         return {
             mobileSearchVisible: false,
-        }
+        };
     },
     methods: {
         toggleTheme,
-        showOffcanvas() {
-            this.$refs['offcanvas'] && this.$refs['offcanvas'].toggle()
-        },
-        showModal(ref = 'login-modal') {
-            this.$refs[ref] && this.$refs[ref].toggle()
-            this.$refs['offcanvas'] && (this.$refs['offcanvas'].visible = false)
-        },
-        toggleMobileSearch() {
-            this.mobileSearchVisible = !this.mobileSearchVisible
-        },
-        appClickHandler(event) {},
+        showOffcanvas,
+        showModal,
     },
-    mounted() {},
-})
+});
 
-themeOnLoad()
-
-window.APP = app
+window.APP = app;

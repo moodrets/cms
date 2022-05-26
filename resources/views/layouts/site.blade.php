@@ -7,8 +7,15 @@
         <link href="{{ mix('/css/index.css') }}" rel="stylesheet">
     </head>
     <body>
+        <script>
+            function themeOnLoad() {
+                const theme = localStorage.getItem('union-app-theme');
+                theme && document.body.classList.add(theme);
+            }
+            themeOnLoad();
+        </script>
         <x-svg-sprite></x-svg-sprite>
-        <main id="main" class="tracking-wider" @click="appClickHandler($event)">
+        <main id="main" class="tracking-wider">
             <x-header :page-attributes="$page->attributes"></x-header>
             @yield('content')
             <x-footer :page-attributes="$page->attributes"></x-footer>

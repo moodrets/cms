@@ -17,8 +17,14 @@
 </template>
 
 <script>
+import { eventBus } from '../events/index';
+
 export default {
     props: {
+        modalName: {
+            type: String,
+            required: true,
+        },
         addClass: {
             type: String,
         },
@@ -26,28 +32,42 @@ export default {
     data() {
         return {
             visible: false,
-        }
+        };
     },
     methods: {
         bodyToggleClass() {
             if (this.visible) {
-                document.body.classList.add('overflow-hidden')
+                document.body.classList.add('overflow-hidden');
             } else {
-                document.body.classList.remove('overflow-hidden')
+                document.body.classList.remove('overflow-hidden');
             }
         },
         toggle() {
-            this.visible = !this.visible
-            this.bodyToggleClass()
+            this.visible = !this.visible;
+            this.bodyToggleClass();
         },
         clickHandler(event) {
             if (event.target.hasAttribute('data-modal-element')) {
-                this.visible = false
+                this.visible = false;
             }
-            this.bodyToggleClass()
+            this.bodyToggleClass();
         },
     },
-}
+    created() {
+        eventBus.$on('showModal', (payload) => {
+            if (this.modalName === payload) {
+                this.visible = true;
+                this.bodyToggleClass();
+            }
+        });
+        eventBus.$on('closeModal', (payload) => {
+            if (this.modalName === payload) {
+                this.visible = false;
+                this.bodyToggleClass();
+            }
+        });
+    },
+};
 </script>
 
 <style lang="scss">

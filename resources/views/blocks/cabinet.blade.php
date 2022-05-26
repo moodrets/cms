@@ -2,7 +2,7 @@
     <div class="container mx-auto px-4">
         <div class="md:flex md:justify-between mb-8 text-34px lg:text-46px leading-tight">
             <h2 class="font-medium">Личный кабинет</h2>
-            <a href="#" class="mt-4 md:mt-0 block text-brand hover:underline hover:text-brand-10" @click.prevent="showModal('login-modal')">Войти в аккаунт</a>
+            <a href="#" class="mt-4 md:mt-0 block text-brand hover:text-brand-10" @click.prevent="showModal('login-modal')">Войти в аккаунт</a>
         </div>
         <div class="site-present-block__body text-white relative z-10 overflow-hidden rounded-xl p-7 bg-gradient-to-r from-block to-block-10 lg:flex lg:items-center lg:p-12 xl:items-stretch dark:from-main dark:to-main-20">
             <div class="flex flex-col justify-between lg:w-3/5 xl:w-2/5">

@@ -1,7 +1,7 @@
-<app-offcanvas ref="offcanvas" v-cloak>
+<app-offcanvas v-cloak>
     <div class="flex mb-4">
-        <button @click="showModal('login-modal')" class="xl:block px-4 py-2 flex-1 rounded-34px border border-2 border-secondary-10 text-black mr-2">Войти</button>
-        <button @click="showModal('login-modal')" class="xl:block px-4 py-2 flex-1 rounded-34px bg-brand text-white">Регистрация</button>
+        <button @click="showModal('login-modal')" class="xl:block px-4 py-2 flex-1 rounded-34px border border-2 border-secondary-10 text-black">Войти</button>
+        <button @click="showModal('login-modal')" class="xl:block px-4 py-2 flex-1 rounded-34px bg-brand text-white ml-2">Регистрация</button>
     </div>
     <div class="border-b-2 border-secondary mt-3 mb-2"></div>
     <ul class="mb-3 flex flex-col">

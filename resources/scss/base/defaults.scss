@@ -1,10 +1,7 @@
 body {
     min-width: 320px;
-
-    * {
-        font-family: Roboto;
-        font-weight: 400;
-    }
+    font-family: Roboto !important;
+    font-weight: 400;
 
     &.dark {
         background-color: theme('colors.main-10');

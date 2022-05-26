@@ -12,32 +12,39 @@
 </template>
 
 <script>
+import { eventBus } from '../events/index';
+
 export default {
     data() {
         return {
             visible: false,
-        }
+        };
     },
     methods: {
         bodyToggleClass() {
             if (this.visible) {
-                document.body.classList.add('overflow-hidden')
+                document.body.classList.add('overflow-hidden');
             } else {
-                document.body.classList.remove('overflow-hidden')
+                document.body.classList.remove('overflow-hidden');
             }
         },
         toggle() {
-            this.visible = !this.visible
-            this.bodyToggleClass()
+            this.visible = !this.visible;
+            this.bodyToggleClass();
         },
         clickHandler(event) {
             if (event.target.hasAttribute('data-offcanvas-element')) {
-                this.visible = false
+                this.visible = false;
             }
-            this.bodyToggleClass()
+            this.bodyToggleClass();
         },
     },
-}
+    created() {
+        eventBus.$on('toggleOffcanvas', (payload) => {
+            this.visible = payload;
+        });
+    },
+};
 </script>
 
 <style lang="scss">

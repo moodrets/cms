@@ -5,16 +5,16 @@
                 <svg><use xlink:href="#menu"></use></svg>
             </div>
             <div class="flex items-center">
-                <a href="/" class="flex-none block site-logo italic text-brand text-34px leading-34px">
+                <a href="/" class="flex-none block site-logo italic text-brand text-26px md:text-34px leading-34px">
                     <strong class="font-black">Union</strong>
                     <span>Capital</span>
                 </a>
                 <nav class="site-top-nav flex-none hidden xl:block ml-8">
                     <ul class="flex text-16px dark:text-white">
-                        <li class="mr-8"><a href="#" class="hover:underline hover:text-brand">Проект</a></li>
-                        <li class="mr-8"><a href="#" class="hover:underline hover:text-brand">Новости</a></li>
-                        <li class="mr-8"><a href="#" class="hover:underline hover:text-brand">Помощь</a></li>
-                        <li class="mr-8"><a href="#" class="hover:underline hover:text-brand">Контакты</a></li>
+                        <li class="mr-8"><a href="#" class="hover:text-brand">Проект</a></li>
+                        <li class="mr-8"><a href="#" class="hover:text-brand">Новости</a></li>
+                        <li class="mr-8"><a href="#" class="hover:text-brand">Помощь</a></li>
+                        <li class="mr-8"><a href="#" class="hover:text-brand">Контакты</a></li>
                     </ul>
                 </nav>
             </div>
@@ -27,7 +27,7 @@
                 </form>
                 <button @click="showModal('login-modal')" class="hidden xl:block px-4 self-stretch rounded-34px border border-2 border-secondary-10">Войти</button>
                 <button @click="showModal('login-modal')" class="hidden xl:block px-4 self-stretch rounded-34px bg-brand text-white">Регистрация</button>
-                <div @click="toggleMobileSearch()" class="round-icon flex-none xl:hidden" data-site-search-mobile-trigger :class="{'is-active': mobileSearchVisible}">
+                <div @click="mobileSearchVisible = !mobileSearchVisible" class="round-icon flex-none xl:hidden" data-site-search-mobile-trigger :class="{'is-active': mobileSearchVisible}">
                     <x-svg-icon name="search-brand"></x-svg-icon>
                 </div>
                 <button type="button" class="theme-switcher flex-none" @click="toggleTheme()">
