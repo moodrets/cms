@@ -1,0 +1,21 @@
+.site-header {
+    &__menu {
+        @apply text-[16px];
+
+        ul {
+            @apply flex;
+        }
+
+        li {
+            @apply mx-1 xl:mx-4;
+
+            a {
+                @apply text-neutral transition-all;
+
+                &:hover {
+                    @apply text-theme;
+                }
+            }
+        }
+    }
+}

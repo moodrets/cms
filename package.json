@@ -10,6 +10,8 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "@babel/core": "^7.20.5",
+        "@babel/preset-env": "^7.20.2",
         "@mdi/font": "^6.7.96",
         "autoprefixer": "^10.4.2",
         "axios": "^0.27",
@@ -26,6 +28,7 @@
         "vue-template-compiler": "^2.6.14"
     },
     "dependencies": {
+        "baguettebox.js": "^1.11.1",
         "vue": "^2.6.14"
     }
 }

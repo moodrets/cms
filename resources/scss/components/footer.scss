@@ -1,0 +1,20 @@
+.site-footer {
+    &__social {
+        a {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            @apply bg-theme transition-all flex items-center justify-center mr-2;
+
+            &:hover {
+                transform: scale(1.08);
+            }
+
+            .svg-icon {
+                width: 20px;
+                height: 20px;
+                @apply text-brand;
+            }
+        }
+    }
+}

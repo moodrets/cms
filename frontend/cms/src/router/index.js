@@ -115,19 +115,19 @@ const routes = [
         component: () => import("@/pages/Template/TemplateDetail.vue"),
       },
       {
-        path: "/order",
-        name: "OrderList",
+        path: "/review",
+        name: "ReviewList",
         meta: {
           menu: {
-            title: "Заявки",
+            title: "Отзывы",
           },
         },
-        component: () => import("@/pages/Order/OrderList.vue"),
+        component: () => import("@/pages/Review/ReviewList.vue"),
       },
       {
-        path: "/order/:id",
-        name: "OrderDetail",
-        component: () => import("@/pages/Order/OrderDetail.vue"),
+        path: "/review/:id",
+        name: "ReviewDetail",
+        component: () => import("@/pages/Review/ReviewDetail.vue"),
       },
     ],
   },

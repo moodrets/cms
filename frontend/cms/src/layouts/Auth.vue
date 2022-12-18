@@ -111,8 +111,8 @@ export default {
         to: { name: "TemplateList" },
       },
       {
-        title: "Заявки",
-        to: { name: "OrderList" },
+        title: "Отзывы",
+        to: { name: "ReviewList" },
       },
     ],
   }),

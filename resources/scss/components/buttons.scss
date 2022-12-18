@@ -1,0 +1,35 @@
+.site-button {
+    -webkit-tap-highlight-color: transparent;
+    @apply cursor-pointer outline-none border-none bg-none text-[16px] rounded-[60px] py-2 px-6 font-bold inline-flex items-center justify-center;
+
+    &--round-light {
+        @apply border border-solid border-white text-neutral transition-all;
+
+        &:hover,
+        &.active {
+            @apply bg-theme border-theme text-brand-20;
+        }
+    }
+
+    &--round-dark {
+        @apply border border-solid border-brand-20 text-brand-20 transition-all;
+
+        &:hover,
+        &.active {
+            @apply bg-theme border-theme;
+        }
+    }
+
+    &--theme {
+        @apply bg-theme text-primary;
+
+        &.active {
+            @apply bg-brand-20 text-neutral;
+        }
+    }
+
+    &[disabled] {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}

@@ -1,0 +1,81 @@
+* {
+    font-family: 'Proxima Nova', sans-serif !important;
+}
+
+body {
+    font-size: 14px;
+    min-width: 320px;
+
+    &.offcanvas-opened {
+        .site-header {
+            .svg-icon--mobile-menu {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+[v-cloak] {
+    display: none !important;
+}
+
+.site-container {
+    @apply max-w-[1440px] mx-auto px-5;
+}
+
+.block-dark {
+    @apply text-white bg-brand-20;
+
+    .site-button--theme.active {
+        @apply border-2 border-solid border-theme;
+    }
+
+    .site-button--round-dark {
+        @apply border-2 border-solid border-theme text-theme;
+
+        &.active {
+            @apply text-brand-20;
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply text-white;
+    }
+}
+
+.site-logo {
+    flex: none;
+    width: 120px;
+    max-width: 100%;
+
+    @screen lg {
+        width: 200px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+
+ul li a.active {
+    @apply font-extrabold text-theme;
+}
+
+.tab-show-enter-active,
+.tab-show-leave-active {
+    transition-duration: 500ms;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.6, 0.15, 0.35, 0.8);
+}
+.tab-show-enter,
+.tab-show-leave-to {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(60px);
+}

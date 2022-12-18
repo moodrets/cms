@@ -1,0 +1,11 @@
+.contacts-info-block {
+    @apply py-7 xl:py-12;
+    background-image: url('/public/files/contacts-info-block.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 200px auto;
+
+    @screen lg {
+        background-size: auto auto;
+    }
+}

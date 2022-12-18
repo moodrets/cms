@@ -1,0 +1,22 @@
+@tailwind base;
+
+// libs
+@import 'baguettebox.js/dist/baguetteBox.min.css';
+
+// base
+@import './fonts';
+@import './base/defaults';
+@import './base/typography';
+
+// components
+@import './components/breadcrumbs';
+@import './components/svg-icon';
+@import './components/header';
+@import './components/footer';
+@import './components/buttons';
+@import './components/contacts-info-block';
+@import './components/present-block';
+@import './components/apartments-list';
+
+@tailwind components;
+@tailwind utilities;

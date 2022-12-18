@@ -1,0 +1,32 @@
+.apartments-list {
+    &__plan-svg {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        polygon {
+            cursor: pointer;
+            fill: #ff8000;
+            opacity: 0;
+
+            &:hover,
+            &.active {
+                opacity: 0.2;
+            }
+        }
+    }
+
+    .poly-point {
+        pointer-events: none;
+        position: absolute;
+        z-index: 5;
+        min-width: 34px;
+        min-height: 34px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        @apply text-white bg-brand-20 text-[16px];
+    }
+}
